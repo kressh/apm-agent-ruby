@@ -23,7 +23,7 @@ class FakeServer
 end
 
 RSpec.configure do |config|
-  config.before :each, :with_fake_server do
+  config.before :each do # , :with_fake_server do
     puts "\n"
     puts 'stuuuuuub' + ('v' * 80)
     @request_stub =
