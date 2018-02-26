@@ -20,7 +20,7 @@ if defined? Rails
         config.secret_key_base = '__secret_key_base'
 
         config.logger = Logger.new(nil)
-        # config.logger = Logger.new(STDOUT)
+        config.logger = Logger.new(STDOUT)
         config.logger.level = Logger::DEBUG
 
         config.eager_load = false
@@ -29,6 +29,7 @@ if defined? Rails
         config.elastic_apm.service_name = 'RailsTestApp'
         config.elastic_apm.flush_interval = nil
         config.elastic_apm.debug_transactions = true
+        config.elastic_apm.debug_http = true
       end
 
       class PagesController < ActionController::Base
